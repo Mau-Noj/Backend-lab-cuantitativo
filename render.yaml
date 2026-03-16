@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lab-cuantitativo-api
+    runtime: go
+    buildCommand: go build -o server ./main.go
+    startCommand: ./server
+    envVars:
+      - key: GIN_MODE
+        value: release
+      - key: PORT
+        value: 8080
